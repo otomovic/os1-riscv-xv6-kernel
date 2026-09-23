@@ -1,0 +1,31 @@
+#ifndef PROJECT_BASE_V1_1_SYSCALL_CODES_H
+#define PROJECT_BASE_V1_1_SYSCALL_CODES_H
+
+#include "../lib/hw.h"
+
+enum SyscallCode : uint64 {
+    MEM_ALLOC = 0x01,
+    MEM_FREE = 0x02,
+
+    THREAD_CREATE = 0x11,
+    THREAD_EXIT = 0x12,
+    THREAD_DISPATCH = 0x13,
+    THREAD_CREATE_WITHOUT_START = 0x14,
+    THREAD_START = 0x15,
+    THREAD_JOIN = 0x16,
+    THREAD_DESTROY = 0x17,
+
+    SEM_OPEN = 0x21,
+    SEM_CLOSE = 0x22,
+    SEM_WAIT = 0x23,
+    SEM_SIGNAL = 0x24,
+    SEM_WAIT_N = 0x25,
+    SEM_SIGNAL_N = 0x26,
+
+    TIME_SLEEP = 0x31,
+
+    GETC = 0x41,
+    PUTC = 0x42
+};
+
+#endif //PROJECT_BASE_V1_1_SYSCALL_CODES_H
